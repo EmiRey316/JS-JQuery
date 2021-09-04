@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/*Estilos generales del sitio e imports del resto de archivos .scss. Este archvio será compilado en css*/
+/*Imports del resto de archivos con estilos particulares*/
+/*Paleta de colores*/
+/*Variables para media queries*/
+/*Estilos para el menú superior o navegador del sitio*/
+header {
+  background-color: #FC2C3C;
+  margin-bottom: 50px; }
+  header .navbar-brand {
+    padding: 0px; }
+  header .menuLogo {
+    width: 230px;
+    height: auto;
+    vertical-align: middle; }
+  header .navbar {
+    padding: 0px; }
+
+#dropdownPrestamos {
+  background-color: #FC2C3C !important; }
+
+@media screen and (min-width: 992px) {
+  #homeMain {
+    margin: 0px 50px;
+    display: grid;
+    grid-template: repeat(2, auto)/repeat(2, 1fr);
+    grid-template-areas: "Titulo ." "Simple Americano";
+    gap: 20px; }
+    #homeMain #contenedorTitulo {
+      grid-area: Titulo;
+      padding-left: 50px; }
+    #homeMain #contenedorPrestamoSimple {
+      grid-area: Simple; }
+    #homeMain #contenedorPrestamoAmericano {
+      grid-area: Americano; } }
+
+#mainSimulator {
+  margin: 50px 20px; }
+  #mainSimulator #simulatorForm, #mainSimulator #sectionResults {
+    padding: 10%;
+    border-radius: 5px;
+    background-color: lightgray;
+    margin-bottom: 50px;
+    height: 100%; }
+  #mainSimulator #sectionResults h2 {
+    margin-bottom: 10%; }
+
+@media screen and (min-width: 600px) {
+  #simulatorContainer {
+    display: grid;
+    grid-template: repeat(2, auto)/repeat(2, 1fr);
+    grid-template-areas: "Simulator Results" "Table Table";
+    column-gap: 20px;
+    row-gap: 20px; }
+  #sectionSimulator {
+    grid-area: Simulator; }
+  #sectionResults {
+    grid-area: Results; }
+  #sectionTable {
+    grid-area: Table; } }
+
+#loansTable thead {
+  background-color: #FC2C3C; }
+
+.modal-content {
+  position: relative; }
+  .modal-content button {
+    position: absolute;
+    top: 1em;
+    right: 1em; }
